@@ -20,9 +20,9 @@
 
 - RULE-SET,ABC,GlobalTV
 - RULE-SET,Abema TV,GlobalTV
-- RULE-SET,Amazon,GlobalTV
+- RULE-SET,Amazon,Amazon
 - RULE-SET,Apple News,GlobalTV
-- RULE-SET,Apple TV,GlobalTV
+- RULE-SET,Apple TV,Apple TV
 - RULE-SET,Bahamut,GlobalTV
 - RULE-SET,BBC iPlayer,GlobalTV
 - RULE-SET,DAZN,GlobalTV
@@ -30,7 +30,8 @@
 - RULE-SET,encoreTVB,GlobalTV
 - RULE-SET,Fox Now,GlobalTV
 - RULE-SET,Fox+,GlobalTV
-- RULE-SET,HBO,GlobalTV
+- RULE-SET,HBO Max,HBO Max
+- RULE-SET,HBO GO,HBO GO
 - RULE-SET,Hulu Japan,GlobalTV
 - RULE-SET,Hulu,GlobalTV
 - RULE-SET,Japonx,GlobalTV
@@ -43,7 +44,7 @@
 - RULE-SET,PBS,GlobalTV
 - RULE-SET,Pornhub,GlobalTV
 - RULE-SET,Soundcloud,GlobalTV
-- RULE-SET,ViuTV,GlobalTV
+- RULE-SET,ViuTV,ViuTV
 
 - RULE-SET,Telegram,Telegram
 - RULE-SET,Steam,Steam
@@ -62,7 +63,7 @@
 
 - RULE-SET,LAN,DIRECT
 - GEOIP,CN,Domestic
-- MATCH,Others
+- MATCH,DIRECT
 
 script:
   code: |
@@ -82,9 +83,9 @@ script:
             "WeTV": "AsianTV",
             "ABC": "GlobalTV",
             "Abema TV": "GlobalTV",
-            "Amazon": "GlobalTV",
+            "Amazon": "Amazon",
             "Apple News": "GlobalTV",
-            "Apple TV": "GlobalTV",
+            "Apple TV": "Apple TV",
             "Bahamut": "GlobalTV",
             "BBC iPlayer": "GlobalTV",
             "DAZN": "GlobalTV",
@@ -92,7 +93,8 @@ script:
             "encoreTVB": "GlobalTV",
             "Fox Now": "GlobalTV",
             "Fox+": "GlobalTV",
-            "HBO": "GlobalTV",
+            "HBO Max": "HBO Max",
+            "HBO GO": "HBO GO",
             "Hulu Japan": "GlobalTV",
             "Hulu": "GlobalTV",
             "Japonx": "GlobalTV",
@@ -105,7 +107,7 @@ script:
             "PBS": "GlobalTV",
             "Pornhub": "GlobalTV",
             "Soundcloud": "GlobalTV",
-            "ViuTV": "GlobalTV",
+            "ViuTV": "ViuTV",
             "Telegram": "Telegram",
             "Steam": "Steam",
             "Speedtest": "Speedtest",
@@ -312,11 +314,17 @@ rule-providers:
     url: 'https://cdn.jsdelivr.net/gh/lhie1/Rules@master/Clash/Provider/Media/Fox%2B.yaml'
     path: ./Rules/Media/Fox+
     interval: 86400
-  HBO:
+  HBO Max:
     type: http
     behavior: classical
-    url: 'https://cdn.jsdelivr.net/gh/lhie1/Rules@master/Clash/Provider/Media/HBO.yaml'
-    path: ./Rules/Media/HBO
+    url: https://cdn.jsdelivr.net/gh/TonyStarkJr2021/Rules@main/Clash/Provider/Media/HBO%20Max.yaml
+    path: "./rule_provider/HBO_Max"
+    interval: 86400
+  HBO GO:
+    type: http
+    behavior: classical
+    url: https://cdn.jsdelivr.net/gh/TonyStarkJr2021/Rules@main/Clash/Provider/Media/HBO%20Go.yaml
+    path: "./rule_provider/HBO_GO"
     interval: 86400
   Hulu Japan:
     type: http
