@@ -63,6 +63,9 @@
 
 - RULE-SET,LAN,DIRECT
 - GEOIP,CN,Domestic
+- DST-PORT,80,Others
+- DST-PORT,443,Others
+- DST-PORT,22,Others
 - MATCH,DIRECT
 
 script:
