@@ -13,3 +13,4 @@ payload:
   - DOMAIN,s3-ap-southeast-1.amazonaws.com
   - DOMAIN-SUFFIX,hbogoasia.com
   - DOMAIN-SUFFIX,hbogoasia.hk
+  - DOMAIN,hbogoprod-vod.akamaized.net
